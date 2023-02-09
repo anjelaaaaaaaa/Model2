@@ -39,6 +39,8 @@ public class memberInsertPro implements action{
 		dao.insertMember(dto);
 		
 //		memberLoginForm.me로 이동정보를 담아서 갈거임 
+//		actionForward(이동정보를 담는 객체)를 생성함 ! 
+//		여기에 setPath, setRedirect에 이동정보를 담아서 그 객체를 들고 호출한 곳으로 돌아감. return forward 
 		actionForward forward = new actionForward();
 		forward.setPath("memberLoginForm.me");
 		forward.setRedirect(true);

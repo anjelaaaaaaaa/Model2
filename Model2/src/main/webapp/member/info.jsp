@@ -1,5 +1,4 @@
-<%@page import="member.MemberDTO"%>
-<%@page import="member.MemberDAO"%>
+<%@page import="com.itwillbs.member.db.MemberDTO"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -14,21 +13,18 @@
 </head>
 <body>
 <h1>jsp3/info.jsp</h1>
-<%
-// 회원정보 기준값 id => session에 "id"라는 이름으로 저장해놨음 !!!!
-// 세션에서 id값을 가져와서 변수에 저장. => 다운캐스팅
-String id = (String)session.getAttribute("id");
 
-// MemberDAO 객체생성 => 기억장소 할당
-MemberDAO dao = new MemberDAO();
-// MemberDTO형으로 getMember(String id) 메서드 정의, 메서드 호출 
-MemberDTO dto = dao.getMember(id);
+<%
+// 자바단에서 request로 담아온걸 jsp단에 request.getAttribute로 전달함 
+// "dto"형을 받아온거고 이렇게 받아온건 object형이기 때문에 MemberDTO로 형변환 해줘야함 
+MemberDTO dto = (MemberDTO)request.getAttribute("dto");
 %>
+
 아이디 : <%= dto.getId() %><br>
 비밀번호 : <%= dto.getPass() %><br>
 이름 : <%= dto.getName() %><br>
 가입날짜 : <%=dto.getDate() %><br>
 
-<a href="main.jsp">메인으로 이동</a>
+<a href="memberMain.me">메인으로 이동</a>
 </body>
 </html>

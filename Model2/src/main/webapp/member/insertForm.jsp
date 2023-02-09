@@ -8,16 +8,16 @@
 </head>
 <body>
 
-<!-- http://localhost:8080/Model2/InsertForm.me -->
-<!-- http://localhost:8080/Model2/InsertPro.me -->
+<!-- http://localhost:8080/Model2/memberInsertForm.me -->
+<!-- http://localhost:8080/Model2/memberInsertPro.me -->
 
 <h1>member/insertForm.jsp</h1>
+
 <form action="memberInsertPro.me" method="post">
 아이디 : <input type="text"name="id"><br>
 비밀번호 : <input type="password" name="pass"><br>
 이름 : <input type="text" name="name"><br>
 <input type="submit" value="회원가입">
-
 
 </form>
 </body>

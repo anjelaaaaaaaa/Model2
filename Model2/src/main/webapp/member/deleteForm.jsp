@@ -11,12 +11,14 @@
 <%
 String id = (String)session.getAttribute("id");
 %>
-<form action="deletePro.jsp" method="post">
+
+<form action="memberDeletePro.me" method="post">
 아이디 : <input type="text"name="id" value="<%=id%>" readonly><br>
 비밀번호 : <input type="password" name="pass"><br>
+
 <input type="submit" value="삭제하기">
 
-<a href="main.jsp">메인으로 이동</a>
+<a href="memberMain.me">메인으로 이동</a>
 </form>
 </body>
 </html>
