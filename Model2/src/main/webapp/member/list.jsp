@@ -1,12 +1,5 @@
-
 <%@page import="com.itwillbs.member.db.MemberDTO"%>
-<%@page import="com.itwillbs.member.db.MemberDAO"%>
 <%@page import="java.util.ArrayList"%>
-
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,10 +12,7 @@
 <h1>member/list.jsp</h1>
 
 <%
-// MemberDAO 객체생성
-// 리턴할형 ArrayList<MemberDTO> getMemberList() 메서드 정의
-MemberDAO dao = new MemberDAO();
-ArrayList<MemberDTO> memberList = dao.getMemberList();
+ArrayList<MemberDTO> memberList = (ArrayList<MemberDTO>)request.getAttribute("memberList");
 %>
 
 <table border="1">
@@ -31,8 +21,7 @@ ArrayList<MemberDTO> memberList = dao.getMemberList();
 	for(int i = 0;i<memberList.size();i++){
 		// 배열 한칸의 내용 가져오기 
 		MemberDTO dto = memberList.get(i);		
-		%>
-		
+		%>		
 		<tr><td><%=dto.getId() %></td><td><%=dto.getPass() %></td>
 		<td><%=dto.getName() %></td><td><%=dto.getDate() %></td></tr>
 		<%
@@ -40,7 +29,7 @@ ArrayList<MemberDTO> memberList = dao.getMemberList();
 %>
 </table>
 
-<a href="main.jsp">메인으로 이동</a>
+<a href="memberMain.me">메인으로 이동</a>
 
 </body>
 </html>
