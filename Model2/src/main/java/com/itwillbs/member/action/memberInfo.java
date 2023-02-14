@@ -7,7 +7,6 @@ import com.itwillbs.member.db.MemberDAO;
 import com.itwillbs.member.db.MemberDTO;
 
 public class memberInfo implements action{
-
 	@Override
 	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("memberInfo execute()실행 ");

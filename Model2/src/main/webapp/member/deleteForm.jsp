@@ -22,5 +22,3 @@ String id = (String)session.getAttribute("id");
 </form>
 </body>
 </html>
-
-

@@ -68,6 +68,7 @@ public class boardFrontController extends HttpServlet{
 			forward.setRedirect(false);			
 			
 		} else if(sPath.equals("/fileBoardWritePro.bo")) {
+			System.out.println("fileBoardWritePro.bo 실행");
 			
 			action = new fileBoardWritePro();
 			try {
@@ -75,18 +76,66 @@ public class boardFrontController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+
+		} else if (sPath.equals("/boardContent.bo")) {
+			System.out.println("boardContent.bo 실행");
+			
+			action = new boardContent();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		} else if (sPath.equals("/boardUpdateForm.bo")) {
+			
+			action = new boardUpdateForm();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		} else if(sPath.equals("/boardUpdatePro.bo")) {
+			System.out.println("boardUpdatePro.bo 실행");
+			
+			action = new boardUpdatePro();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}  else if(sPath.equals("/boardDeletePro.bo")) {
+			System.out.println("boardDeletePro.bo 실행");
+			
+			action = new boardDeletePro();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}		
+		} else if(sPath.equals("/fileBoardUpdateForm.bo")) {
+			System.out.println("fileBoardUpdateForm.bo 실행");
+			
+			action = new fileBoardUpdateForm();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if(sPath.equals("/fileBoardUpdatePro.bo")) {
+			System.out.println("fileBoardUpdatePro.bo 실행");
+			
+			action = new fileBoardUpdatePro();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
-		
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+						
 //		forward(이동정보 담은 객체에 뭔가 있다면 ! == 이동정보가 있다면 )
 		if(forward != null) {
 //			이동방식 비교

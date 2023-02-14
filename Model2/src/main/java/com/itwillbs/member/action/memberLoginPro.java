@@ -1,7 +1,6 @@
 package com.itwillbs.member.action;
 
 import java.io.PrintWriter;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -10,7 +9,6 @@ import com.itwillbs.member.db.MemberDTO;
 
 // 부모 인터페이스를 상속받기 
 public class memberLoginPro implements action{
-
 	@Override
 	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {	
 		System.out.println("memberLoginPro.execute 실행()");

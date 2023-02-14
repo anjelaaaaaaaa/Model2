@@ -10,6 +10,16 @@ public class BoardDTO {
 	private String content;
 	private int readcount;
 	private Timestamp date;
+	
+//	추가 file
+	private String file;
+	
+	public String getFile() {
+		return file;
+	}
+	public void setFile(String file) {
+		this.file = file;
+	}
 	public int getNum() {
 		return num;
 	}

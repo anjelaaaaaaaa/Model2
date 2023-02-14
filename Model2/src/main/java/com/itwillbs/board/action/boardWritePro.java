@@ -10,7 +10,6 @@ import com.itwillbs.board.db.BoardDAO;
 import com.itwillbs.board.db.BoardDTO;
 
 public class boardWritePro implements action{
-
 	@Override
 	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("boardWritePro execute()실행");
@@ -37,7 +36,6 @@ public class boardWritePro implements action{
 		// 리턴할 형 없음 insertBoard(BoardDTO dto)메서드 정의
 		// BoardDAO 객체생성
 		// insertBoard(dto) 메서드 호출
-
 		
 		BoardDTO dto = new BoardDTO();
 		
@@ -48,8 +46,7 @@ public class boardWritePro implements action{
 		dto.setReadcount(readcount);
 		
 		BoardDAO dao = new BoardDAO();
-		dao.insertBoard(dto);
-		
+		dao.insertBoard(dto);	
 
 //		글목록 list.jsp
 		actionForward forward = new actionForward();

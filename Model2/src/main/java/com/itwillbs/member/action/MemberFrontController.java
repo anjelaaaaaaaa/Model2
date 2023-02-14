@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class MemberFrontController extends HttpServlet{
-	
 //	메서드 호출 => 자동으로 => 처리담당자 (서블릿) 만들기 => 자동으로 doGet() doPost() 이런애들을 호출함.. 
-	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("MemberFrontController doGet()");
@@ -63,7 +61,6 @@ public class MemberFrontController extends HttpServlet{
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace(); }
-			
 			
 		} else if (sPath.equals("/memberLoginForm.me")) {
 //			member/loginForm.jsp 이동 

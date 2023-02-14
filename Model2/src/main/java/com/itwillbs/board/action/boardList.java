@@ -9,7 +9,6 @@ import com.itwillbs.board.db.BoardDAO;
 import com.itwillbs.board.db.BoardDTO;
 
 public class boardList implements action{
-
 	@Override
 	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("boardList execute실행()");

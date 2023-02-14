@@ -7,10 +7,8 @@ import com.itwillbs.member.db.MemberDAO;
 import com.itwillbs.member.db.MemberDTO;
 
 public class memberList implements action{
-
 	@Override
-	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
+	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {	
 //		MemberDAO 객체생성
 //		리턴할형 ArrayList<MemberDTO> getMemberList() 메서드 정의
 		MemberDAO dao = new MemberDAO();

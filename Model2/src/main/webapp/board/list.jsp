@@ -22,6 +22,8 @@ int pageCount = (Integer)request.getAttribute("pageCount");
 
 <h1>board/list.jsp</h1>
 <h1><a href="boardWriteForm.bo">글쓰기</a></h1>
+<a href="memberMain.me">메인으로이동</a><br>
+<br>
 <table border="1">
 <tr><td>글번호</td><td>글쓴이</td><td>글제목</td><td>글쓴날짜</td><td>조회수</td></tr>
 <%
@@ -31,7 +33,7 @@ int pageCount = (Integer)request.getAttribute("pageCount");
 		<tr><td><%=dto.getNum() %></td><td><%=dto.getName() %></td>
 			<td>
 <!-- 			세션값으로 안들고가고 파라미터 값으로 들고감!  -->
-			<a href="content.jsp?num=<%=dto.getNum() %>">
+			<a href="boardContent.bo?num=<%=dto.getNum() %>">
 			<%=dto.getSubject() %>
 			</a></td>
 			<td><%=dto.getDate() %></td>

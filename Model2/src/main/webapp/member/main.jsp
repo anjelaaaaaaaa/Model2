@@ -40,6 +40,7 @@ if(id!=null){
 
 <a href="boardWriteForm.bo">글쓰기</a><br>
 <a href="boardList.bo">글목록 </a><br>
+<a href="fileBoardWriteForm.bo">첨부파일 글쓰기</a><br>
 
 </body>
 </html>

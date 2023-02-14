@@ -8,10 +8,8 @@ import com.itwillbs.member.db.MemberDTO;
 
 // 인터페이스 틀 상속받기
 public class memberInsertPro implements action{
-
 	@Override
 	public actionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
 		System.out.println("memberInsertPro execute()");
 		
 //		request 한글처리
